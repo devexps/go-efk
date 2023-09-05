@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package common.conf;
+
+option go_package = "github.com/devexps/go-efk/api/gen/go/common/conf;conf";
+
+message Logger {
+  message Fluent {
+    string endpoint = 1;
+  }
+
+  string type = 1;
+  Fluent fluent = 2;
+}
